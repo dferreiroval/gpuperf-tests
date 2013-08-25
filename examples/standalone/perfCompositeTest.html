@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GPUPERF test01</title>
+	<script src="../../tests/perf-composite.js"></script>
+</head>
+<body>
+	<script>
+		PerfComposite.setup({
+			"debug": true,
+			"runs": 10,
+			"layers": 200,
+			"frames": 1,
+			"pattern": "%8$#@",
+			"styles": " " + 
+					"text-shadow: 0 0 50px red;" +
+					//'box-shadow: 1px 2px 50px red;' + 
+					//'background:rgba(10,255,0,0.3); ' + 
+					//'border-radius: 10px 10px;' +
+					'position:absolute;' + 
+					''
+		});
+		setTimeout(function () {
+			PerfComposite.run();
+		},3000);
+	</script>
+</body>
+</html>

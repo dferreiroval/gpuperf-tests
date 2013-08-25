@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GPUPERF testCanvas</title>
+	<script src="../../tests/perf-canvas.js"></script>
+</head>
+<body>
+	<script>
+		PerfCanvas.setup({
+			"debug": true,
+			"runs": 10,
+			"width": 50,
+			"height": 50,
+			"opacity": 1
+		});
+
+		setTimeout(function () {
+			PerfCanvas.run();
+		}, 3000);
+	</script>
+</body>
+</html>

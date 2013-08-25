@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>GPUPERF test02</title>
+	<script src="../../tests/perf-transform.js"></script>
+</head>
+
+<body>
+	<script>
+		PerfTransform.setup({
+			"debug": true,
+			"runs": 10,
+			"layers": 100,
+			"size": 400,
+			"styles": "background:blue",
+			"layerStyle": "box-shadow: 1px 2px 3px #222;"
+		});
+
+		setTimeout(function () {
+			PerfTransform.run();
+		},3000);
+	</script>
+</body>
+</html>
