@@ -8,6 +8,15 @@
 	<script defer src="../lib/testSuite.js"></script>
 </head>
 <body>
-	
+	<script>
+    window.addEventListener('load', function () {
+        window.GPU_PERF_ENV = {}; //overrides
+
+        PERFSUITE.initialize();
+        PERFSUITE.run(function (results, response) {
+            console.log(results, response);
+        });
+    });
+</script>
 </body>
 </html>
